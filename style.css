@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+::-moz-selection { /* Code for Firefox */
+    background: transparent;
+  }
+  ::selection {
+    background: transparent;
+  }
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.651),rgba(0, 0, 0, 0.527)), url(images/count.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 30px 50px;
+    z-index: 100000;
+}
+header .logo{
+    position: relative;
+    transition: 0.6s;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+header ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+header ul li:hover::after{
+    width: 100%;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(images/head.jpg);
+    background-size: cover;
+
+}
+header.sticky{
+    padding: 15px 100px;
+    background: rgb(26, 26, 26);
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.text-box h2{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.text-box h1 span{
+    color: #000;
+}
+.abo{
+    background: #000;
+}
+.about{
+    color: #fff;
+    margin: 0px 60px;
+    padding-bottom: 30px;
+    padding-top: 65px;
+}
+.about h1{
+    font-size: 55px;
+    padding: 0 50px;
+    font-style: oblique;
+    color: #45f3ff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.about h2{
+    font-size: 30px;
+    padding: 0 60px;
+    font-weight: 700;
+    font-family: 'The Nautigal', cursive;
+    font-style: oblique;
+    letter-spacing: 3px;
+}
+.about h3{
+    font-size: 25px;
+    padding: 0 60px;
+    font-style: oblique;
+    color: #a3f9ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about p{
+    font-size: 20px;
+    padding: 0 60px;
+}
+.about h4{
+    color: rgb(109, 109, 109);
+    font-style: oblique;
+    font-family: 'Whisper', cursive;
+    font-size: 18px;
+    padding-left: 35px;
+}
+.about h5{
+    color: rgb(109, 109, 109);
+    font-style: oblique;
+    font-family: 'Whisper', cursive;
+    font-size: 20px;
+}
+hr.separator{
+    background: linear-gradient(to right, transparent, white, transparent);
+    border: none;
+    margin: 0px 0 50px 0;
+    height: 1px;
+}
+.counter-up{
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 0 50px;
+}
+.counter-up .content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+html{
+    scroll-behavior: smooth;
+}
+.content .box{
+    width: calc(25% - 30px);
+    border: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    flex-direction: column;
+}
+.content .box .icon{
+    font-size: 48px;
+    color: #e6e6e6;
+}
+.content .box .counter{
+    font-size: 50px;
+    color: #f2f2f2;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.content .box .text{
+    color: #ccc;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.contact{
+    background: #000;
+    padding: 30px 0;
+}
+.contactctct h1{
+    font-size: 30px;
+    text-align: center;
+    color: #45f3ff;
+    margin-top: 60px;
+}
+.cont{
+    padding: 20px;
+    width: 80%;
+    margin-left: 120px;
+}
+.cont .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.cont .row100 .co{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.cont .row100 .inputbox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #45f3ff;
+}
+.cont .row100 .inputbox input,
+.cont .row100 .inputbox.textarea textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+.cont .row100 .inputbox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.cont .row100 .inputbox input:focus + .text,
+.cont .row100 .inputbox input:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+.cont .row100 .inputbox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.cont .row100 .inputbox input:focus ~ .line,
+.cont .row100 .inputbox input:valid ~ .line{
+    height: 100%;
+}
+.cont .row100 .inputbox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.cont .row100 .inputbox.textarea textarea{
+    height: 100%;
+    resize: none;
+}
+.cont .row100 .inputbox textarea:focus + .text,
+.cont .row100 .inputbox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+.cont .row100 .inputbox textarea:focus ~ .line,
+.cont .row100 .inputbox textarea:valid ~ .line{
+    height: 100%;
+}
+.cont .row100 .co button{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #45f3ff;
+    color: #000;
+    font-size: 18px;
+    border-radius: 2px;
+}
