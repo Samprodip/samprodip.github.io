@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Music Player</title>
+</head>
+<body>
+
+  <header>
+    <h1> <img src="headphone.png"> My Playlist - Samprodip Chandra</h1>
+  </header>
+  <main>
+    <ul id="playlist">
+      <li class="song" data-src="music/nightchanges.mp3">Night Changes - One Direction</li>
+      <li class="song" data-src="music/ineedonlyyou.mp3">I Need Only You - Love Beans</li>
+      <li class="song" data-src="music/storyofmylife.mp3">Story of My Life - One Direction</li>
+      <li class="song" data-src="music/perfect.mp3">Perfect - Ed Sheeran</li>
+      <li class="song" data-src="music/rewritethestars.mp3">Rewrite The Stars - Zac Efron</li>
+      <li class="song" data-src="music/goldenpath.mp3">The Golden Path - Vaibhav Bundhoo</li>
+      <li class="song" data-src="music/theyranaway.mp3">They Ran Away - Vaibhav Bundhoo</li>
+      <li class="song" data-src="music/ourowntorepair.mp3">Our Own to Repair - Vaibhav Bundhoo</li>
+      <li class="song" data-src="music/starsign.mp3">Starsign - Vaibhav Bundhoo</li>
+      <li class="song" data-src="music/superboysupergirl.mp3">Super Boy Super Girl - Vaibhav Bundhoo</li>
+      <li class="song" data-src="music/perfectending.mp3">Perfect Ending - Vaibhav Bundhoo</li>
+      <li class="song" data-src="music/wakeup.mp3">Wake Up - Julie and the Phantoms Cast</li>
+      <li class="song" data-src="music/bright.mp3">Bright - Julie and the Phantoms Cast</li>
+      <li class="song" data-src="music/everything.mp3">Everything - Diamond Eyes</li>
+    </ul>
+    <section class="foot">
+      <p>Copyright © 2022, <b>Samprodip Chandra</b></p>
+  </section>
+  </main>
+  <footer id="footer">
+    <div id="song-info">
+      <marquee direction="right"><span id="song-name"></span></marquee>
+    </div>
+    <audio id="player" controls controlsList="nodownload noplaybackrate"></audio>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
