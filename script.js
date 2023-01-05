@@ -11,6 +11,13 @@ playlist.addEventListener('click', event => {
   songName.textContent = song.textContent;
 });
 
+player.addEventListener('ended', () => {
+  const currentSong = playlist.querySelector('.current-song');
+  const nextSong = currentSong.nextElementSibling;
+  if (nextSong) {
+    nextSong.click();
+  }
+});
 
 /*player hide and show*/
 /*const playerr = document.querySelector('#player');
