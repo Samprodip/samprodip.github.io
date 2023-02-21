@@ -2,6 +2,7 @@
 const playlist = document.querySelector('#playlist');
 const player = document.querySelector('#player');
 const songName = document.querySelector('#song-name');
+const pageTitle = document.querySelector('title');
 
 playlist.addEventListener('click', event => {
   const currentSong = playlist.querySelector('.current-song');
@@ -12,6 +13,7 @@ playlist.addEventListener('click', event => {
   player.src = src;
   player.play();
   songName.textContent = song.textContent;
+  pageTitle.textContent = song.textContent + " - Playing Now";
 });
 
 player.addEventListener('ended', () => {
@@ -23,21 +25,4 @@ player.addEventListener('ended', () => {
     nextSong.click();
   }
 });
-
-/*player hide and show*/
-/*const playerr = document.querySelector('#player');
-const gifi = document.querySelector('#footer');
-
-    playerr.addEventListener('play', event => {
-      gifi.style.display = 'block';
-    });
-
-    playerr.addEventListener('pause', event => {
-      gifi.style.display = 'none';
-    });
-*/
-window.addEventListener("scroll", function(){
-var header = document.querySelector("header");
-header.classList.toggle("sticky", window.scrollY > 0);
-})
 
