@@ -20,5 +20,18 @@
                 <a href="index.html"><img class="logo" src="logo.png"></a>
             </div>-->
         </section>
+        <script>
+            document.addEventListener('contextmenu', event => event.preventDefault());
+
+            document.addEventListener('keydown', function(event) {
+                if (event.keyCode == 67 && event.ctrlKey) { // Ctrl+C
+                    event.preventDefault();
+                } else if (event.keyCode == 85 && event.ctrlKey) { // Ctrl+U
+                    event.preventDefault();
+                } else if (event.keyCode == 123) { // F12
+                    event.preventDefault();
+                }
+            }, false);
+        </script>
     </body>
 </html>
