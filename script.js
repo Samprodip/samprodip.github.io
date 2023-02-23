@@ -45,4 +45,17 @@ var header = document.querySelector("header");
 header.classList.toggle("sticky", window.scrollY > 0);
 })
 
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.addEventListener('keydown', function(event) {
+  if (event.keyCode == 67 && event.ctrlKey) { // Ctrl+C
+    event.preventDefault();
+  } else if (event.keyCode == 85 && event.ctrlKey) { // Ctrl+U
+    event.preventDefault();
+  } else if (event.keyCode == 123) { // F12
+    event.preventDefault();
+  }
+}, false);
+
+
 
