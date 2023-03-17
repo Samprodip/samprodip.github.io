@@ -1,0 +1,89 @@
+<html lang="en">
+    <head>
+        <title>Lover - Taylor Swift</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/1989.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Monoton&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <style>
+          body{
+            background-image: linear-gradient(transparent, #000000), url(css/images/lover.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+          }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><i class="fa fa-chevron-left" ></i></a>
+            <h1>Lover</h1>
+        </header>
+        <div class="banner">
+          <img src="css/images/6.jpg">
+          <h2>Lover</h2>
+          <h5>|</h5>
+          <h3>Taylor Swift</h3>
+          <h5>|</h5>
+          <h4>18 SONGS • 1 HOUR 1 MINUTES</h4>
+        </div>
+        <main>
+          <h1 id="heading">#  SONG</h1>
+            <ul id="playlist">
+              <hr>
+              <li class="song current-song" data-src="music/lover/iforgotthatyouexisted.mp3">1. I Forgot That You Existed</li>
+              <hr>
+              <li class="song" data-src="music/lover/cruelsummer.mp3">2. Cruel Summer</li>
+              <hr>
+              <li class="song" data-src="music/lover/lover.mp3">3. Lover</li>
+              <hr>
+              <li class="song" data-src="music/lover/theman.mp3">4. The Man</li>
+              <hr>
+              <li class="song" data-src="music/lover/thearcher.mp3">5. The Archer</li>
+              <hr>
+              <li class="song" data-src="music/lover/ithinkheknows.mp3">6. I Think He Knows</li>
+              <hr>
+              <li class="song" data-src="music/lover/missamericana&theheartbreakprince.mp3">7. Miss Americana & The Heartbreak Prince</li>
+              <hr>
+              <li class="song" data-src="music/lover/paperrings.mp3">8. Paper Rings</li>
+              <hr>
+              <li class="song" data-src="music/lover/corneliastreet.mp3">9. Cornelia Street</li>
+              <hr>
+              <li class="song" data-src="music/lover/deathbyathousandcuts.mp3">10. Death By A Thousand Cuts</li>
+              <hr>
+              <li class="song" data-src="music/lover/londonboy.mp3">11. London Boy</li>
+              <hr>
+              <li class="song" data-src="music/lover/soonyoullgetbetter.mp3">12. Soon You’ll Get Better [feat. The Chicks]</li>
+              <hr>
+              <li class="song" data-src="music/lover/falsegod.mp3">13. False God</li>
+              <hr>
+              <li class="song" data-src="music/lover/youneedtocalmdown.mp3">14. You Need To Calm Down</li>
+              <hr>
+              <li class="song" data-src="music/lover/afterglow.mp3">15. Afterglow</li>
+              <hr>
+              <li class="song" data-src="music/lover/me.mp3">16. ME! (feat. Brendon Urie of Panic! At The Disco) [feat. Brendon Urie]</li>
+              <hr>
+              <li class="song" data-src="music/lover/itsnicetohaveafriend.mp3">17. It’s Nice To Have A Friend</li>
+              <hr>
+              <li class="song" data-src="music/lover/daylight.mp3">18. Daylight</li>
+              <hr>
+              <br>
+              <br>
+            </ul>
+          </main>
+          <footer id="footer">
+            <div id="song-info">
+              <marquee direction="right"><span id="song-name"></span></marquee>
+            </div>
+            <audio id="player" controls controlsList="nodownload noplaybackrate"></audio>
+            <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
+          </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
