@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::-moz-selection { /* For Firefox */
+  background: transparent;
+}
+::selection {
+  background: transparent;
+}
+::-webkit-scrollbar{
+  width: 6px;
+}
+::-webkit-scrollbar-track{
+  background-color: #000;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #ccc;
+  border-radius: 20px;
+}
+body{
+    background-image: url(images/back.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/*header*/
+
+header {
+  background-color: #00000041;
+  border-bottom: 0.05px solid rgb(75, 74, 74);
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Permanent Marker', cursive;
+  display: flex;
+  transition: 0.6s;
+  height: 45px;
+  z-index: 100000;
+}
+header h1{
+  margin: 0 auto;
+}
+header.sticky{
+  background: /*rgb(26, 26, 26)*/#000;
+}
+@media(max-width: 900px){
+  header{
+    height: 60px;
+  }
+  header h1{
+    font-size: 25px;
+  }
+}
+
+/*albums*/
+  
+.row{
+  margin: 86px 86px;
+  display: flex;
+  justify-content: space-between;
+}
+.album-col {
+  overflow: hidden;
+  background-color: #00000065;
+  border-radius: 5px;
+  height: 70px;
+  width: 340px;
+  display: flex; /* added to align items horizontally */
+  align-items: center; /* added to center items vertically */
+  transition: 0.25s;
+}
+.album-col:hover{
+  box-shadow: 0 0 12px 5px #7c7c7c3b;
+}
+.album-col a img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 15px; /* added to create space between image and title */
+}
+  
+.album-col h2 a {
+  color: #fff;
+  font-size: 15.2px;
+  margin: auto;
+  font-family: cooper;
+  text-align: center;
+  text-decoration: none;
+    
+}
+@media(max-width: 1000px){
+  .row {
+    margin: 0px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #st{
+    margin-top: 86px;
+  }
+  .album-col {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+/*Songs list page with player*/
+
+main {
+  padding: 20px;
+  padding-bottom: 100px;
+  margin-top: 80px;
+  color: #fff;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.25s;
+}
+
+li:hover {
+  background-color: rgba(83, 83, 83, 0.459);
+  border-radius: 5px;
+}
+footer {
+  background-color: rgb(17, 17, 17);
+  border-top: 0.05px solid rgb(46, 46, 46);
+  color: white;
+  padding: 20px;
+  text-align: left; 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+}
+.cookie-container {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: #2f3640;
+  color: #f5f6fa;
+  padding: 18px 32px;
+  box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+  transition: 400ms;
+}
+
+.cookie-container.active {
+  bottom: 0;
+}
+.cookie-container p{
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 20px;
+}
+.cookie-btn {
+  background: transparent;
+  border: 0;
+  color: #f5f6fa;
+  padding-top: 2px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.4);
+  transition: 0.5s;
+  display: block;
+  position: relative;
+}
+.cookie-btn:hover{
+  color: #fff;
+}
+.foot{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.foot p{
+  font-size: 18px;
+  text-decoration: none;
+  color: #ccc;
+}
