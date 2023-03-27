@@ -1,0 +1,146 @@
+<html lang="en">
+    <head>
+        <title>Something to change your mood!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Monoton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Something to Change Your Mood!</h1>
+        </header>
+        <br><br>
+        <div class="row">
+            <div id="st" class="album-col">
+                <a href="fearless.html"><img src="css/images/9.jpeg"></a>
+                <h2><a href="fearless.html">Fearless (Taylor's version)</a></h2>
+            </div>
+            <div class="album-col">  
+                <a href="four.html"><img src="css/images/2.jpeg"></a>
+                <h2><a href="four.html">Four(One Direction)</a></h2>    
+            </div>
+            <div class="album-col">     
+                <a href="red.html"><img src="css/images/5.jpeg"></a>
+                <h2><a href="red.html">Red (Taylor's Version)</a></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="album-col">
+                <a href="midnightmemories.html"><img src="css/images/3.jpeg"></a>
+                <h2><a href="midnightmemories.html">Midnight Memories<br>(One Direction)</a></h2>
+            </div>
+            <div class="album-col">  
+                <a href="deluxe.html"><img src="css/images/8.jpeg"></a>
+                <h2><a href="deluxe.html">÷ Deluxe(Ed Sheeran)</a></h2>    
+            </div>
+            <div class="album-col">     
+                <a href="midnights.html"><img src="css/images/13.png"></a>
+                <h2><a href="midnights.html">Midnights - Taylor Swift</a></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="album-col">
+                <a href="lover.html"><img src="css/images/6.jpg"></a>
+                <h2><a href="lover.html">Lover - Taylor Swift</a></h2>
+            </div>
+            <div class="album-col">     
+                <a href="1989.html"><img src="css/images/11.png"></a>
+                <h2><a href="1989.html">1989(Taylor Swift)</a></h2>
+            </div>
+            <div class="album-col">     
+                <a href="justics.html"><img src="css/images/10.png"></a>
+                <h2><a href="justice.html">Justice (Justin Bieber)</a></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="album-col">
+                <a href="lovebeans.html"><img src="css/images/7.jpg"></a>
+                <h2><a href="lovebeans.html">I Need Only You - Love Beans</a></h2>
+            </div>
+            <div class="album-col">  
+                <a href="speaknow.html"><img src="css/images/17.jpg"></a>
+                <h2><a href="speaknow.html">Speak Now - Taylor Swift</a></h2>    
+            </div>
+            <div class="album-col">  
+                <a href="comingsoon.html"><img src="css/images/4.jpg"></a>
+                <h2><a href="comingsoon.html">Big Time Rush</a></h2>    
+            </div>
+        </div>
+        <div class="row">
+            <div class="album-col">     
+                <a href="stay.html"><img src="css/images/12.png"></a>
+                <h2><a href="stay.html">Stay</a></h2>
+            </div>
+            <div class="album-col">
+                <a href="reputation.html"><img src="css/images/14.jpg"></a>
+                <h2><a href="reputation.html">reputation - Taylor Swift</a></h2>
+            </div>
+            <div class="album-col">  
+                <a href="comingsoon.html"><img src="css/images/15.jpg"></a>
+                <h2><a href="comingsoon.html">Up All Night - One Direction</a></h2>    
+            </div>
+        </div>
+        <div class="row">
+            <div class="album-col">     
+                <a href="goldenhour.html"><img src="css/images/19.jpeg"></a>
+                <h2><a href="goldenhour.html">golden hour - Jvke</a></h2>
+            </div>
+            <div class="album-col">     
+                <a href="comingsoon.html"><img src="css/images/18.jpg"></a>
+                <h2><a href="comingsoon.html">Wings - BTS</a></h2>
+            </div>
+            <div class="album-col">     
+                <a href="folklore.html"><img src="css/images/17.png"></a>
+                <h2><a href="folklore.html">folklore - Taylor Swift</a></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="album-col">     
+                <a href="comingsoon.html"><img src="css/images/16.png"></a>
+                <h2><a href="comingsoon.html">Deep Focus</a></h2>
+            </div>
+        </div>
+
+        <hr style="background-color: #ccc; opacity: 50%;">
+
+        <section class="foot">
+            <p>Website designed By, <b>Samprodip Chandra</b></p>
+        </section>
+
+        <div class="cookie-container">
+            <button class="cookie-btn">
+              X Close
+            </button>
+            <p>
+              We recommend not using Mozilla Firefox browser to browse this website. If the music autoplay freezes please reload the website.
+            </p>
+            
+          </div>
+        
+        <script>
+            window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+            });
+        </script>
+
+        <script>
+            const cookieContainer = document.querySelector(".cookie-container");
+            const cookieButton = document.querySelector(".cookie-btn");
+
+            cookieButton.addEventListener("click", () => {
+                cookieContainer.classList.remove("active");
+                localStorage.setItem("cookieBannerDisplayed", "true");
+            });
+
+            setTimeout(() => {
+                if (!localStorage.getItem("cookieBannerDisplayed")) {
+                cookieContainer.classList.add("active");
+                }
+            }, 10);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<html lang="en">
+    <head>
+        <title>golden hour - Jvke</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/1989.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Monoton&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <style>
+          body{
+            background-image: linear-gradient(#00000069, #000000), url(css/images/goldenhour.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+          }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><i class="fa fa-chevron-left" ></i></a>
+            <h1>golden hour</h1>
+        </header>
+        <div class="banner">
+          <img src="css/images/19.jpeg">
+          <h2>golden hour</h2>
+          <h5>|</h5>
+          <h3>Jvke</h3>
+          <h5>|</h5>
+          <h4>1 SONGS • 3 MINUTES</h4>
+        </div>
+        <main>
+          <h1 id="heading">#  SONG</h1>
+            <ul id="playlist">
+              <hr>
+              <li class="song current-song" data-src="https://docs.google.com/uc?export=open&id=1AegiYtLf4JQsbqxzu9pFmi6M5OKsIZdo">1. golden hour</li>
+              <hr>
+              <br>
+              <br>
+            </ul>
+          </main>
+          <footer id="footer">
+            <div class="progess_bar" id="progess_bar">
+              <div class="progessed" id="progessed">
+              </div>
+            </div>
+            <div class="time">
+              <span id="currentTime">0:00</span>
+            </div>
+            <div class="totaltime">
+              <span id="totalDuration">0:00</span>
+            </div>
+            <div class="abc">
+              <img class="small-banner" src="css/images/19.jpeg">
+              <span id="song-name"></span>
+              <p class="artist">Jvke - golden hour</p>
+            </div>
+            <div class="controls">  
+              <audio id="player" controls controlsList="nodownload noplaybackrate"></audio>
+              <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
+              <button id="prev-btn"><i class="fa-sharp fa-solid fa-backward-step"></i></button>
+              <img class="pl" src="css/images/play.svg" id="playpause">
+              <button id="next-btn"><i class="fa-sharp fa-solid fa-forward-step"></i></button>
+              <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
+             </div> 
+          </footer>
+          <section class="foot">
+            <p>℗© 2022 JVKE MUSIC LLC under exclusive license to AWAL Recordings America, Inc.</p>
+          </section>
+        <script src="script.js"></script>
+    </body>
+</html>
