@@ -214,6 +214,22 @@ window.addEventListener("scroll", function(){
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+// Check if the website is already open in another window or tab
+if (sessionStorage.getItem('isWebsiteOpen')) {
+  alert('Another instance of the website is already open.');
+  // Redirect to another page or perform any other action
+  window.location.href = 'https://example.com'; // Replace with your desired URL
+} else {
+  // Set a flag indicating that the website is open
+  sessionStorage.setItem('isWebsiteOpen', true);
+
+  // Remove the flag when the user closes the window or tab
+  window.addEventListener('beforeunload', function() {
+    sessionStorage.removeItem('isWebsiteOpen');
+  });
+}
+
+
 /*
 //to prevent context menu
 document.addEventListener('contextmenu', event => event.preventDefault());
