@@ -215,19 +215,22 @@ window.addEventListener("scroll", function(){
 });
 
 // Check if the website is already open in another window or tab
-if (sessionStorage.getItem('isWebsiteOpen')) {
+if (document.cookie.split(';').some(function(item) {
+    return item.trim().indexOf('websiteOpen=') == 0;
+})) {
   alert('Another instance of the website is already open.');
   // Redirect to another page or perform any other action
   window.location.href = 'https://example.com'; // Replace with your desired URL
 } else {
-  // Set a flag indicating that the website is open
-  sessionStorage.setItem('isWebsiteOpen', true);
+  // Set a cookie to indicate that the website is open
+  document.cookie = 'websiteOpen=true; path=/';
 
-  // Remove the flag when the user closes the window or tab
+  // Remove the cookie when the user closes the window or tab
   window.addEventListener('beforeunload', function() {
-    sessionStorage.removeItem('isWebsiteOpen');
+    document.cookie = 'websiteOpen=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
   });
 }
+
 
 
 /*
