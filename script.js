@@ -220,7 +220,7 @@ if (document.cookie.split(';').some(function(item) {
 })) {
   alert('Another instance of the website is already open.');
   // Redirect to another page or perform any other action
-  window.location.href = 'https://example.com'; // Replace with your desired URL
+  window.location.href = 'about:home'; // Replace with your desired URL
 } else {
   // Set a cookie to indicate that the website is open
   document.cookie = 'websiteOpen=true; path=/';
