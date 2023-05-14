@@ -249,3 +249,36 @@ document.onkeydown = function(event) {
   }
 };
 */
+
+//loading of song
+
+// Hide the loading overlay by default
+document.addEventListener("DOMContentLoaded", function () {
+  var loadingOverlay = document.getElementById("loading-overlay");
+  loadingOverlay.style.opacity = "0";
+  loadingOverlay.style.pointerEvents = "none";
+});
+
+// Show the loading overlay when a song or next/previous button is clicked
+var songs = document.querySelectorAll(".song");
+//var nextButton = document.getElementById("next-button");
+//var prevButton = document.getElementById("prev-button");
+
+songs.forEach(function (song) {
+  song.addEventListener("click", showLoadingOverlay);
+});
+
+nextButton.addEventListener("click", showLoadingOverlay);
+prevButton.addEventListener("click", showLoadingOverlay);
+
+function showLoadingOverlay() {
+  var loadingOverlay = document.getElementById("loading-overlay");
+  loadingOverlay.style.opacity = "1";
+  loadingOverlay.style.pointerEvents = "auto";
+
+  // Simulating the music loading with setTimeout
+  setTimeout(function () {
+    loadingOverlay.style.opacity = "0";
+    loadingOverlay.style.pointerEvents = "none";
+  }, 2500); // Adjust the time to match the actual loading time
+}
