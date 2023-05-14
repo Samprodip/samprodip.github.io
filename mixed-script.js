@@ -4,6 +4,7 @@ const songName = document.querySelector('#song-name');
 const pageTitle = document.querySelector('title');
 const sbanner = document.querySelector('#sbanner');
 const artt = document.querySelector('#artt');
+const logoo = document.querySelector('#logoo')
 
 let currentSongIndex = localStorage.getItem('currentSongIndex') || 0;
 let isPlaying = false;
@@ -21,6 +22,7 @@ function playSong(songIndex) {
   player.src = src;
   sbanner.src = srcc;
   artt.textContent = arc;
+  logoo.href = srcc;
   player.currentTime = localStorage.getItem('currentTime') || 0; // resume from the stored time needs to be fixed
   player.play();
   playlist.querySelectorAll('.song').forEach((song, index) => {
