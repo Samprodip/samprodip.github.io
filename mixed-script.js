@@ -251,7 +251,7 @@ document.onkeydown = function(event) {
   }
 };
 */
-
+/*
 //loading of song
 
 // Hide the loading overlay by default
@@ -283,4 +283,4 @@ function showLoadingOverlay() {
     loadingOverlay.style.opacity = "0";
     loadingOverlay.style.pointerEvents = "none";
   }, 2500); // Adjust the time to match the actual loading time
-}
+}*/
