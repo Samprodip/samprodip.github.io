@@ -401,7 +401,7 @@ li {
 li:hover {
   background-color: rgba(255, 255, 255, 0.178);
 }
-#loading-overlay {
+/*#loading-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -426,3 +426,4 @@ li:hover {
   font-size: 24px;
   font-family: 'Poppins', sans-serif;
 }
+*/
