@@ -19,7 +19,7 @@
   border-radius: 20px;
 }
 body{
-    background-image: linear-gradient(#0000001c, #000000), url(images/background.png);
+    background-image: linear-gradient(#0000001c, #000000bb), url(images/splash-image-2.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
