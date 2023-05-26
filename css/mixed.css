@@ -60,10 +60,13 @@
   width: 350px;
 }
 .artist{
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 650;
+  font-family: Arial, Helvetica, sans-serif;
   margin-left: 90px;
   transform: translateY(26px);
   position: absolute;
+  color: #ccccccab;
 }
 footer {
   background-color: /*rgb(17, 17, 17)*/#000;
