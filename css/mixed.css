@@ -403,7 +403,7 @@ ul {
 }
 li {
   cursor: pointer;
-  width: 100%;
+  width: fit-content;
   padding: 10px 15px;
   transition: 0.25s;
   font-size: 18px;
