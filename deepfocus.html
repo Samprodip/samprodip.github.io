@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+        <title>Deep Focus</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/mixed.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Monoton&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+        <link id="logoo" rel="icon" type="image/icon type">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <style>
+        body{
+          background-image: linear-gradient(#0000008a, #000000ef), url(css/images/deepfocus.jpg);
+          background-attachment: fixed;
+          background-position: center;
+          background-size: cover;
+        }
+        header{
+          width: 40px;
+          height: 60px;
+          background: #000;
+        }
+        header h1{
+          padding-top: 6px;
+          font-size: 35px;
+        }
+        header a i{
+          margin-left: 13px;
+          font-size: 20px;
+        }
+        @media(max-width: 900px){
+          header{
+            align-items: center;
+            height: 60px;
+            
+          }
+          header h1{
+            padding-top: 0px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 25px;
+          }
+          header a i{
+            margin-top: 0px;
+            position: absolute;
+            margin-left: 13px;
+            transform: translateY(-8px);
+          }
+        }
+        #cov{
+          width: 46px;
+          height: 46px;
+          border-radius: 5px;
+          margin: 0 12px;
+        }
+        #spotify{
+          height: 100%;
+        }
+      </style>
+      <div id="loading-overlay">
+        <span id="loading-text">Loading...</span>
+      </div>
+      
+        <header>
+            <a href="index.html"><i class="fa fa-chevron-left" ></i></a>
+        </header>
+        <iframe id="spotify"  src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </body>
+</html>        
