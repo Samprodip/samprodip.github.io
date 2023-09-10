@@ -138,20 +138,17 @@ player.addEventListener("pause", function() {
 const currentTime = document.getElementById("currentTime");
 const totalDuration = document.getElementById("totalDuration");
 
-player.addEventListener("loadedmetadata", function() {
-  // Display total duration
-  const duration = player.duration;
-  const minutes = Math.floor(duration / 60);
-  const seconds = Math.floor(duration % 60);
-  totalDuration.innerHTML = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-});
-
 player.addEventListener("timeupdate", function() {
   // Display current time
   const currentTimeValue = player.currentTime;
   const minutes = Math.floor(currentTimeValue / 60);
   const seconds = Math.floor(currentTimeValue % 60);
   currentTime.innerHTML = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+  const remainingTimeValue = player.duration - currentTimeValue;
+  const remainingMinutes = Math.floor(remainingTimeValue / 60);
+  const remainingSeconds = Math.floor(remainingTimeValue % 60);
+  totalDuration.innerHTML = `-${remainingMinutes}:${remainingSeconds.toString().padStart(2, '0')}`;
 });
 // check if there is a stored song index and resume playing the song
 if (localStorage.getItem('currentSongIndex')) {
