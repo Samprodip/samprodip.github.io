@@ -370,6 +370,7 @@ main {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-bottom: 130px;
 }
 
 hr{
