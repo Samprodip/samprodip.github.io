@@ -57,8 +57,15 @@ player.addEventListener('ended', () => {
     playSong(shuffleSongIndex);
   }
   else {
-    const nextSongIndex = (currentSongIndex + 1) % playlist.childElementCount;
-    playSong(nextSongIndex);
+    currentSongIndex++;
+    if(currentSongIndex >= totalSongs){
+      currentSongIndex = 0;
+      playSong(currentSongIndex);
+    }
+    else{
+      //const nextSongIndex = (currentSongIndex + 1) % playlist.childElementCount;
+      playSong(currentSongIndex);
+    }
   }
 });
 
