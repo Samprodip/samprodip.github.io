@@ -12,8 +12,10 @@ let shuffleMode = false;
 function playSong(songIndex) {
   const song = playlist.querySelectorAll('.song')[songIndex];
   const src = song.getAttribute('data-src');
-  songName.textContent = song.textContent;
-  pageTitle.textContent = song.textContent + " - Playing Now";
+  var text = song.textContent;
+  var newText = text.replace(/^\d+\.\s/, '');
+  songName.textContent = newText;
+  pageTitle.textContent = newText + " - Playing Now";
   player.src = src;
   player.currentTime = localStorage.getItem('currentTime') || 0; // resume from the stored time needs to be fixed
   player.play();
