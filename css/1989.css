@@ -375,6 +375,12 @@ header.sticky{
   .banner h5{
     display: none;
   }
+  .banner h6{
+    text-align: center;
+  }
+  #alb-name{
+    font-size: 28px;
+  }
 }
 
 /*Songs list page with player*/
