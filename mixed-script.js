@@ -7,6 +7,11 @@ const artt = document.querySelector('#artt');
 const logoo = document.querySelector('#logoo');
 const lyricsContainer = document.querySelector('#lyrics-container');
 const lyricsText = document.querySelector('#lyrics-text');
+const backBtn = document.querySelector('#back');
+
+/*var referrerURL = document.referrer;
+var htmlFileName = referrerURL.split('/').pop();
+backBtn.href = htmlFileName;*/
 
 var segments = window.location.pathname.split('/');
 var toDelete = [];
