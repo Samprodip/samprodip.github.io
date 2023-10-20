@@ -29,7 +29,13 @@ body{
   background-image: linear-gradient(#0000004d, #0000009d), url(images/background2.jpg);
 }
 }
-
+#preloader{
+  background: #15191f url(images/load.gif) no-repeat center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
 /*header*/
 
 header {
