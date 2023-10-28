@@ -236,7 +236,15 @@ window.addEventListener('beforeunload', function() {
 });
 }
 
+//webpage icon
+const smallBanner = document.querySelector('.small-banner');
+var link = document.createElement('link');
+link.rel = 'icon';
+link.type = 'image/jpeg'; 
+link.href = smallBanner.src;
 
+var head = document.getElementsByTagName('head')[0];
+head.appendChild(link);
 /*
 //to prevent context menu
 document.addEventListener('contextmenu', event => event.preventDefault());
