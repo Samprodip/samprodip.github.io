@@ -140,14 +140,37 @@ function getTotalSongs() {
 }
 var totalSongs = getTotalSongs();
 
+// Function to shuffle an array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+function createRandomArray(n) {
+  const array = [];
+  for (let i = 0; i < n; i++) {
+    array.push(i);
+  }
+  return shuffleArray(array);
+}
+
+const numberOfValues = totalSongs; 
+const randomArray = createRandomArray(numberOfValues);
+//console.log(randomArray);
+var tempIndex = 0;
+
 //modes and default
 player.addEventListener('ended', () => {
   if (repeatMode) {
     playSong(currentSongIndex);
   }
   else if (shuffleMode){
-    const shuffleSongIndex = Math.floor((Math.random() * totalSongs) + 1);
-    playSong(shuffleSongIndex);
+    tempIndex++;
+    playSong(randomArray[tempIndex]);
+    //console.log(randomArray[tempIndex]);
   }
   else {
     currentSongIndex++;
@@ -186,8 +209,12 @@ repeatButton.addEventListener('click', () => {
 //next and prev
 function prevSong(){
   if(shuffleMode){
-    const shuffleSongIndex = Math.floor((Math.random() * totalSongs) + 1);
-    playSong(shuffleSongIndex);
+    tempIndex--;
+    if (tempIndex < 0) {
+      tempIndex = randomArray.length - 1;
+    }
+    playSong(randomArray[tempIndex]);
+    //console.log(randomArray[tempIndex]);
   }
   else{  
     const prevSongIndex = (currentSongIndex - 1) % playlist.childElementCount;
@@ -197,8 +224,12 @@ function prevSong(){
 
 function nextSong(){
   if(shuffleMode){
-    const shuffleSongIndex = Math.floor((Math.random() * totalSongs) + 1);
-    playSong(shuffleSongIndex);
+    tempIndex++;
+    if (tempIndex >= randomArray.length) {
+      tempIndex = 0;
+    }
+    playSong(randomArray[tempIndex]);
+    //console.log(randomArray[tempIndex]);
   }
   else{
     const nextSongIndex = (currentSongIndex + 1) % playlist.childElementCount;
