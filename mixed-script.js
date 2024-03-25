@@ -52,7 +52,7 @@ async function fetchLyrics(songIndex) {
   try {
     const response = await fetch(`lyrics/${filenameWithoutExtension}/lyrics_${songIndex}.txt`);
     if (!response.ok) {
-      //throw new Error('Lyrics not found');
+      throw new Error('Lyrics not found');
     }
     const lyrics = await response.text();
     return lyrics;
